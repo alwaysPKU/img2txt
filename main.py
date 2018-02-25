@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser()
 #在创建的对象中添加关注的命令行参数和选项
 parser.add_argument('file') #输入文件
 parser.add_argument('-o', '--output') #输出文件
-parser.add_argument('--width', type=int, default=80) #输出字符画的宽度
+parser.add_argument('--width', type=int, default=140) #输出字符画的宽度
 parser.add_argument('--height', type=int, default=80) #输出字符画的高度
 #调用parse_args()方法进行解析
 args = parser.parse_args()
@@ -19,11 +19,11 @@ WIDTH = args.width
 HEIGHT = args.height
 OUTPUT = args.output
 #<-----------------处理图片-------------->
-# ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. ")
-ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|(){}[]?-_+~<>i!lI;:,\"^`'. ")
+# ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'.")
+# ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|(){}[]?-_+~<>i!lI;:,\"^`'. ")
 # ascii_char = list(" chenqiyinzhaoliuhuilin ")
 # ascii_char = list(" 张同学张同学 ")
-
+ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>;:^,.")
 
 #字符与RGB的对应的映射关系
 def get_char(r,g,b,alpha=256):
